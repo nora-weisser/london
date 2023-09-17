@@ -98,6 +98,16 @@ title: Mentors
                                         {% include icons/website.svg %}
                                     </a>
                                     {% endif %}
+                                    {% if network.instagram %}
+                                    <a href="{{network.instagram}}" target="_blank">
+                                        {% include icons/instagram.svg %}
+                                    </a>
+                                    {% endif %}
+                                    {% if network.telegram %}
+                                    <a href="{{network.telegram}}" target="_blank">
+                                        {% include icons/telegram.svg %}
+                                    </a>
+                                    {% endif %}
                                 {% endfor %}
                             </p>
 
