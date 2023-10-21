@@ -37,6 +37,9 @@ title: Mentors
                                 <li class="nav-item">
                                     <div class="nav-link mentees" data-index="{{mentor.index}}" id="bt-m-{{mentor.index}}">Mentees</div>
                                 </li>
+                                <li class="nav-item">
+                                    <div class="nav-link reviews" data-index="{{mentor.index}}" id="bt-v-{{mentor.index}}">Reviews</div>
+                                </li>
                             </ul>
                         </div>
 
@@ -126,6 +129,11 @@ title: Mentors
                                 <p class="card-text"><label>Other potential mentoring topics</label>: {{mentor.skills.extra}}</p>
                             {% endif %}
                         </div>
+
+                        <div id="reviews-{{mentor.index}}" class="card-reviews d-none">
+                            <p>Nothing</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
