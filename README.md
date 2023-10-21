@@ -10,25 +10,25 @@ If you're interested in joining the community as a member or volunteer please vi
 
 Check out [Code of Conduct](https://www.womenwhocode.com/codeofconduct/)
 
-# About Mentorship Programme :woman-raising-hand:
+# About Mentorship Programme
 
 Mentorship is a fantastic way to get support for your personal growth and career development. Within mentorship relationships,  individuals can experience mutually beneficial outcomes that extend to both their personal and professional lives. Engaging in mentorship offeers a chance to hone communication skills, broaden perspectives, and explore innovative approaches to various situations. Moreover, this collaborative journey allows both mentors and mentees to make significant leap in their career journey.
 
 Please, find more information on our [website](https://womenwhocode.github.io/london).
 
-# Contributing :raised_hands:
+# Contributing
 
 This website acts as a project to help introduce people to the Open Source community, and allow transition from newcomers to contributors easier.
 
 We welcome your contributions! 💕 To contribute to this repo, follow the [contributing guidelines](CONTRIBUTING.md).
 
-# About our project :spider_web:
+# About our project
 
-## How to Run Project Locally :woman-running:
+## How to Run Project Locally
 
 This content is created using GitHub Pages with Jekyll. 
 
-### Prerequisites :bee:
+### Prerequisites
 Before you can use Jekyll to test a site, you must:
 
 1. Install [Jekyll](https://jekyllrb.com/docs/installation/).
@@ -39,7 +39,7 @@ We recommend using Bundler to install and run Jekyll. Bundler manages Ruby gem d
    
 3. Install Bundler. For more information, see [Bundler](https://bundler.io/)
 
-### Build and run :building_construction:
+### Build and run
 
 - Run on terminal `bundle install`
 
@@ -48,14 +48,14 @@ We recommend using Bundler to install and run Jekyll. Bundler manages Ruby gem d
 - Access the page on browser: http://127.0.0.1:4000
 
 
-## External Links about GitHub Pages :page_with_curl:
+## External Links about GitHub Pages
 
 * [GitHub Pages Doc](https://docs.github.com/en/pages) 
 * [About GitHub Pages and Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll)
 * [Test locally with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)
 
 
-## How to Run End-To-End Testing Locally :test_tube:
+## How to Run End-To-End Testing Locally
 
 1. Open your Terminal in the `e2e-tests` folder, e.g. `cd ~/workspace/london/e2e-tests`
 2. `npm install cypress --save-dev` - This will install Cypress locally as a dev dependency for your project.
