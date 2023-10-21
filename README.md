@@ -10,7 +10,7 @@ If you're interested in joining the community as a member or volunteer please vi
 
 Check out [Code of Conduct](https://www.womenwhocode.com/codeofconduct/)
 
-# About Mentorship Programme :female-technologist:
+# About Mentorship Programme :woman-raising-hand:
 
 Mentorship is a fantastic way to get support for your personal growth and career development. Within mentorship relationships,  individuals can experience mutually beneficial outcomes that extend to both their personal and professional lives. Engaging in mentorship offeers a chance to hone communication skills, broaden perspectives, and explore innovative approaches to various situations. Moreover, this collaborative journey allows both mentors and mentees to make significant leap in their career journey.
 
