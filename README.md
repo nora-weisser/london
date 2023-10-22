@@ -48,7 +48,7 @@ We recommend using Bundler to install and run Jekyll. Bundler manages Ruby gem d
 - Access the page on browser: http://127.0.0.1:4000
 
 
-## External Links about GitHub Pages
+### External Links about GitHub Pages
 
 * [GitHub Pages Doc](https://docs.github.com/en/pages) 
 * [About GitHub Pages and Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll)
