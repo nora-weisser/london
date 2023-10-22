@@ -12,7 +12,7 @@ Check out [Code of Conduct](https://www.womenwhocode.com/codeofconduct/)
 
 # About Mentorship Programme
 
-Mentorship is a fantastic way to get support for your personal growth and career development. Within mentorship relationships,  individuals can experience mutually beneficial outcomes that extend to both their personal and professional lives. Engaging in mentorship offeers a chance to hone communication skills, broaden perspectives, and explore innovative approaches to various situations. Moreover, this collaborative journey allows both mentors and mentees to make significant leap in their career journey.
+Mentorship is a fantastic way to get support for your personal growth and career development. Within mentorship relationships, individuals can experience mutually beneficial outcomes that extend to their personal and professional lives. Engaging in mentorship offers a chance to hone communication skills, broaden perspectives, and explore innovative approaches to various situations. Moreover, this collaborative journey allows mentors and mentees to make a significant leap in their career journey.
 
 Please, find more information on our [website](https://womenwhocode.github.io/london).
 
