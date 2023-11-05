@@ -1,3 +1,5 @@
+import { validateLink } from '../../helper'
+
 const EVENTS = '.events > h2';
 const RESOURCES_CARDS = '.material .card';
 const EVENTS_CARDS = '.events .card';
@@ -47,14 +49,7 @@ class resourcesLocatorManager {
       .each(($option, index) => {
         cy.wrap($option).find(RESOURCES_TITLE).should('contain', expectedResources[index].title);
         cy.wrap($option).find(RESOURCES_IMAGE).shouldBeVisible();
-        cy.wrap($option).find(RESOURCE_LINK)
-          .should('have.attr', 'href', expectedResources[index].link)
-          .then(link => {
-            cy
-            .request(link.prop('href'))
-            .its('status')
-            .should('eq', 200)
-          })
+        validateLink($option, RESOURCE_LINK, expectedResources[index].link);
       })
     });
   }
@@ -76,20 +71,8 @@ class resourcesLocatorManager {
           cy.wrap($option).find(EVENT_IMAGE).shouldBeVisible();
           cy.wrap($option).find(EVENT_CHECK_MORE).should('contain', 'Check more:');
           cy.wrap($option).find(EVENT_DATE_FORMAT).should('contain', expectedEvents[index].date + " | " + expectedEvents[index].format);
-          cy.wrap($option).find(EVENT_YOUTUBE)
-          .should('have.attr', 'href', expectedEvents[index].links[0].youtube)
-          .then(link => {
-            cy.request(link.prop('href'))
-            .its('status')
-            .should('eq', 200)
-          })
-          cy.wrap($option).find(EVENT_MEETUP)
-          .should('have.attr', 'href', expectedEvents[index].links[1].meetup)
-          .then(link => {
-            cy.request(link.prop('href'))
-            .its('status')
-            .should('eq', 200)
-          })
+          validateLink($option, EVENT_YOUTUBE, expectedEvents[index].links[0].youtube);
+          validateLink($option, EVENT_MEETUP, expectedEvents[index].links[1].meetup);
         })
     })
   }
@@ -111,14 +94,7 @@ class resourcesLocatorManager {
           cy.wrap($option).find(BLOG_DESCRIPTION).should('contain', expectedBlogs[index].description);
           cy.wrap($option).find(BLOG_IMAGE).shouldBeVisible();
           cy.wrap($option).find(BLOG_DATE_AUTHOR).should('contain', expectedBlogs[index].date + ' | ' + expectedBlogs[index].author);
-          cy.wrap($option).find(BLOG_LINK)
-            .should('contain', 'Read more')
-            .should('have.attr', 'href', expectedBlogs[index].link)
-            .then(link => {
-              cy.request(link.prop('href'))
-              .its('status')
-              .should('eq', 200)
-            })
+          validateLink($option, BLOG_LINK, expectedBlogs[index].link);
         })
     })
   }
