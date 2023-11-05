@@ -1,15 +1,15 @@
-import { validateLink } from '../../helper'
+import { validateLink } from '../../helper';
 
 const EVENTS = '.events > h2';
 const RESOURCES_CARDS = '.material .card';
 const EVENTS_CARDS = '.events .card';
-const BLOG_POSTS_HEADER = '.blog > h2'
+const BLOG_POSTS_HEADER = '.blog > h2';
 const BLOG_CARDS = '.blog .card';
 
 // expected results files
 const RESOURCES_FILE = 'test_data/resources.yml';
 const EVENTS_FILE = 'test_data/events.yml';
-const BLOG_POSTS_FILE = 'test_data/blogs.yml'
+const BLOG_POSTS_FILE = 'test_data/blogs.yml';
 
 // resources elements
 const RESOURCES_TITLE = '.card-title';
@@ -41,7 +41,7 @@ class resourcesLocatorManager {
   };
 
   validateResourcesCards = () => {
-    const YAML = require('yamljs')
+    const YAML = require('yamljs');
     cy.fixture(RESOURCES_FILE).then((file) => {
       const expectedResources = YAML.parse(file);
       cy.get(RESOURCES_CARDS)
@@ -50,13 +50,13 @@ class resourcesLocatorManager {
         cy.wrap($option).find(RESOURCES_TITLE).should('contain', expectedResources[index].title);
         cy.wrap($option).find(RESOURCES_IMAGE).shouldBeVisible();
         validateLink($option, RESOURCE_LINK, expectedResources[index].link);
-      })
+      });
     });
-  }
+  };
 
   validateEventHeader = () => {
     return cy.get(EVENTS)
-    .shouldBeVisible().should('contain', 'Events')
+      .shouldBeVisible().should('contain', 'Events');
   };
 
   validateEventCards = () => {
@@ -73,15 +73,15 @@ class resourcesLocatorManager {
           cy.wrap($option).find(EVENT_DATE_FORMAT).should('contain', expectedEvents[index].date + " | " + expectedEvents[index].format);
           validateLink($option, EVENT_YOUTUBE, expectedEvents[index].links[0].youtube);
           validateLink($option, EVENT_MEETUP, expectedEvents[index].links[1].meetup);
-        })
-    })
-  }
+        });
+    });
+  };
 
   validateBlogPostsHeader = () => {
     return cy.get(BLOG_POSTS_HEADER)
       .shouldBeVisible()
-      .should('contain', 'Blog Posts')
-  }
+      .should('contain', 'Blog Posts');
+  };
 
   validateBlogPostsCards = () => {
     const YAML = require('yamljs');
@@ -95,10 +95,10 @@ class resourcesLocatorManager {
           cy.wrap($option).find(BLOG_IMAGE).shouldBeVisible();
           cy.wrap($option).find(BLOG_DATE_AUTHOR).should('contain', expectedBlogs[index].date + ' | ' + expectedBlogs[index].author);
           validateLink($option, BLOG_LINK, expectedBlogs[index].link);
-        })
-    })
-  }
+        });
+    });
+  };
 
-}
+};
 
 export default new resourcesLocatorManager();

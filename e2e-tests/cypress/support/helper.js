@@ -8,5 +8,5 @@ export function validateLink(card, linkLocator, expectedLink) {
       .request(link.prop('href'))
       .its('status')
       .should('eq', SUCCESS_STATUS_CODE);
-    })
-}
+    });
+};
