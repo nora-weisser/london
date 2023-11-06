@@ -31,18 +31,25 @@ const BLOG_IMAGE = '.card-image';
 const BLOG_LINK = '.link > a';
 
 class resourcesLocatorManager {
-  
+
+  getResourcesHeaders = () => {
+    return cy.get('h1').should('exist');
+  };
+
   validateResourcesPageHeader = () => {
-    return cy
-      .get('h1')
+    return this.getResourcesHeaders()
       .shouldBeVisible().should('contain', 'Resources');
+  };
+
+  getResourcesCards = () => {
+    return cy.get(RESOURCES_CARDS).should('exist');
   };
 
   validateResourcesCards = () => {
     const YAML = require('yamljs');
     cy.fixture(RESOURCES_FILE).then((file) => {
       const expectedResources = YAML.parse(file);
-      cy.get(RESOURCES_CARDS)
+      this.getResourcesCards()
       .should('have.length', expectedResources.length)
       .each(($option, index) => {
         cy.wrap($option).find(RESOURCES_TITLE).should('contain', expectedResources[index].title);
@@ -52,16 +59,24 @@ class resourcesLocatorManager {
     });
   };
 
+  getEventsHeaders = () => {
+    return cy.get(EVENTS).should('exist');
+  };
+
   validateEventHeader = () => {
-    return cy.get(EVENTS)
+    return this.getEventsHeaders()
       .shouldBeVisible().should('contain', 'Events');
+  };
+
+  getEventsCards = () => {
+    return cy.get(EVENTS_CARDS).should('exist');
   };
 
   validateEventCards = () => {
     const YAML = require('yamljs');
     cy.fixture(EVENTS_FILE).then((file) => {
       const expectedEvents = YAML.parse(file);
-      cy.get(EVENTS_CARDS)
+      this.getEventsCards()
         .should('have.length', expectedEvents.length)
         .each(($option, index) => {
           cy.wrap($option).find(EVENT_TITLE).should('contain', expectedEvents[index].title);
@@ -75,10 +90,18 @@ class resourcesLocatorManager {
     });
   };
 
+  getBlogPostsHeaders = () => {
+    cy.get(BLOG_POSTS_HEADER).should('exist');
+  };
+
   validateBlogPostsHeader = () => {
-    return cy.get(BLOG_POSTS_HEADER)
+    return this.getBlogPostsHeaders()
       .shouldBeVisible()
       .should('contain', 'Blog Posts');
+  };
+
+  getBlogPostsCards = () => {
+    return cy.get(BLOG_CARDS).should('exist');
   };
 
   validateBlogPostsCards = () => {
