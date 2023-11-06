@@ -91,7 +91,7 @@ class resourcesLocatorManager {
   };
 
   getBlogPostsHeaders = () => {
-    cy.get(BLOG_POSTS_HEADER).should('exist');
+    return cy.get(BLOG_POSTS_HEADER).should('exist');
   };
 
   validateBlogPostsHeader = () => {
