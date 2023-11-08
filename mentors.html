@@ -134,11 +134,14 @@ title: Mentors
                         {% for review in reviews %}
                         <div id="reviews-{{mentor.index}}" class="card-reviews d-none">
                             {% if review.index == mentor.index %}
+                                {% assign feedback_count = review.feedback.size %}
                                 {% for feedback in review.feedback %}
                                     <div class="stars stars{{feedback.score}}"></div>
                                     <p class="card-text">{{feedback.date}}</p>
                                     <p class="card-text">{{feedback.feedback}}</p>
-                                {% endfor %}
+                            {% endfor %}
+                            {% else %}
+                                <p>This mentors hasn't received reviews yet</p>
                             {% endif %}
                         </div>
                         {% endfor %}
