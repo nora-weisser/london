@@ -130,9 +130,18 @@ title: Mentors
                             {% endif %}
                         </div>
 
+                        {% assign reviews = site.data.reviews %}
+                        {% for review in reviews %}
                         <div id="reviews-{{mentor.index}}" class="card-reviews d-none">
-                            <p>Nothing</p>
+                            {% if review.index == mentor.index %}
+                                {% for feedback in review.feedback %}
+                                    <div class="stars stars{{feedback.score}}"></div>
+                                    <p class="card-text">{{feedback.date}}</p>
+                                    <p class="card-text">{{feedback.feedback}}</p>
+                                {% endfor %}
+                            {% endif %}
                         </div>
+                        {% endfor %}
 
                     </div>
                 </div>
