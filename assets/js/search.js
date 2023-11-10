@@ -2,7 +2,6 @@ var controllerSearch = (function(jQuery) {
     const HIDE_CLASS = "d-none";
     const MENTOR_CARD = "#mentor-card-";
     const MENTOR_CARD_HIDDEN = ".card.d-none";
-    const TYPE_CHECKED = "input[name='mentorship-type']:checked";
     const Filter = {
         KEYWORDS: "keywords",
         EXPERIENCE: "exp"
@@ -20,10 +19,13 @@ var controllerSearch = (function(jQuery) {
     let $area = jQuery("#area");
     let $experience = jQuery("#experience");
     let $focus = jQuery("#focus");
-    let $type = jQuery("input[name='mentorship-type']");
+    let $type = jQuery("#type");
     let $form = jQuery(".mentor-filter");
     let $emptyMsg = jQuery("#no-mentors-msg");
     let $descriptionMsg = jQuery(".description");
+    let $searchBtn = jQuery("#search");
+    let $clearBtn = jQuery("#clear-btn");
+    let $toggleFilterBtn = jQuery('#toggle-filters');
     
     let showMentorCard = function(index) {
         jQuery(MENTOR_CARD+index).removeClass(HIDE_CLASS);
@@ -54,6 +56,15 @@ var controllerSearch = (function(jQuery) {
         };
     };
 
+    let experienceFilter = function(key, value, min, max) {
+        return {
+            'key': key,
+            'value': value.toLowerCase(),
+            'min': min,
+            'max': max
+        };
+    };
+
     let applyKeywordsParam = function() {
         var keywords = params.get([Filter.KEYWORDS]);
         
@@ -79,13 +90,14 @@ var controllerSearch = (function(jQuery) {
             filters.push(paramToFilter(Filter.KEYWORDS, $focus.val()));
         }
 
-        let $typeSelected = jQuery(TYPE_CHECKED);
-        if ($typeSelected.val()) {
-            filters.push(paramToFilter(Filter.KEYWORDS, $typeSelected.val()));
+        if ($type.val()) {
+            filters.push(paramToFilter(Filter.KEYWORDS, $type.val()));
         }
 
         if ($experience.val()) {
-            filters.push(paramToFilter(Filter.EXPERIENCE, $experience.val()));
+            let min = $experience.find(":selected").data("min");
+            let max = $experience.find(":selected").data("max");
+            filters.push(experienceFilter(Filter.EXPERIENCE, $experience.val(), min, max));
         }
 
         if (isDefined(filters)) {
@@ -98,6 +110,12 @@ var controllerSearch = (function(jQuery) {
     let removeFilters = function(){
         jQuery(MENTOR_CARD_HIDDEN).removeClass(HIDE_CLASS);
         applyMentorsMsg();
+
+        $keywords.val("");
+        $area.val("");
+        $focus.val("");
+        $type.val("");
+        $experience.val("");
     };
 
     let filterMentors = function(filters) {
@@ -129,7 +147,9 @@ var controllerSearch = (function(jQuery) {
             let inputHidden = jQuery(inputHiddenId);
 
             if (filter.key === Filter.EXPERIENCE) {
-                if (isDefined(inputHidden) &&  parseInt(inputHidden.val()) >= parseInt(filter.value)) {
+                let min = filter.min;
+                let max = filter.max;
+                if (isDefined(inputHidden) &&  parseInt(inputHidden.val()) >= min && parseInt(inputHidden.val()) <= max) {
                     hasFilter++;
                 }
 
@@ -177,7 +197,21 @@ var controllerSearch = (function(jQuery) {
 
         $form.submit(function(e){
             return false;
-        });    
+        }); 
+
+        $searchBtn.click(function() {
+            applyFilters();
+        }); 
+
+        $clearBtn.click(function() {
+            removeFilters();
+        }); 
+
+        $toggleFilterBtn.click(function() { 
+            $clearBtn.toggleClass(HIDE_CLASS);
+            jQuery('#toggle-container').toggleClass("mt-5");
+            jQuery("#filters-container").toggleClass(HIDE_CLASS);
+        });
     };
 
     let init = function() {

@@ -573,7 +573,7 @@
     - linkedin: https://www.linkedin.com/in/preejababu/
 
 - name: Seyoung Joo
-  disabled: true 
+  disabled: false 
   hours: 0
   type: long-term
   index: 19
@@ -898,7 +898,7 @@
     - twitter: https://twitter.com/monalsanghvi
 
 - name: Iana Luntc
-  disabled: true 
+  disabled: false 
   hours: 0
   type: long-term
   index: 29
@@ -983,7 +983,7 @@
     - linkedin: https://www.linkedin.com/in/bisijoshfalade
 
 - name: Madhura Chaganty
-  disabled: true 
+  disabled: false 
   hours: 0
   type: long-term
   index: 32
@@ -1156,7 +1156,7 @@
     - github: https://github.com/marichka-offen
 
 - name: Dakshika Chauhan
-  disabled: true 
+  disabled: false 
   hours: 0
   position: Senior Business Analyst, Amazon
   type: long-term
@@ -1364,7 +1364,7 @@
   disabled: false 
   hours: 4
   position: Software Engineer, Yandex
-  type: both
+  type: Both
   index: 45
   location: Moscow
   bio: |
@@ -1399,7 +1399,7 @@
   disabled: false 
   hours: 5
   position: QA Specialist and Mentor, Trivago
-  type: both
+  type: Both
   index: 46
   location: Düsseldorf, Germany
   bio: ISQB-TM and ISTQB-TA certified manual and automated tester for frontend and backend teams for the last ten years; a degree in Computer Engineering; lector and author of the IT school's QA Basic and QA Pro courses; survived in an abroad company and now hold interviews there.
@@ -1467,7 +1467,7 @@
   index: 48
   location: Barcelona, Spain
   bio: |
-    After starting my software development career at the Apple Developer Academy, I worked with high-performance teams on everything from advanced authentication systems to leading creative applications at companies like Filmr, CESAR, Banco Modal and Revolut; the apps I've developed have been featured multiple times as 'App of The Day' and 'App we Love' by Apple.
+    After starting my software development career at the Apple Developer Academy, I worked with high-performance teams on everything from advanced authentication systems to leading creative applications at companies like Filmr, CESAR, Banco Modal and Revolut; the apps I've developed have been featured multiple times as "App of The Day" and "App we Love" by Apple.
     I am currently working alongside an incredibly talented team at Revolut on an amazing banking experience for our customers.
   image: assets/images/mentors/52.jpeg
   languages: English, Portuguese
