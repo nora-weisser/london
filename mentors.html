@@ -131,17 +131,22 @@ title: Mentors
                         </div>
 
                         {% assign reviews = site.data.reviews %}
-                        {% for review in reviews %}
-                            <div id="reviews-{{mentor.index}}" class="card-reviews d-none">
-                                {% if review.index == mentor.index %}
-                                    {% for feedback in review.feedback %}
-                                        <div class="stars stars{{feedback.score}}"></div>
-                                        <p class="card-text">{{feedback.date}}</p>
-                                        <p class="card-text">{{feedback.feedback}}</p>
-                                    {% endfor %}
-                                {% endif %}
-                            </div>
-                        {% endfor %}
+                        {% assign mentorFound = false %}
+                        <div id="reviews-{{mentor.index}}" class="card-reviews d-none">
+                            {% for review in reviews %}
+                                    {% if review.index == mentor.index %}
+                                        {% for feedback in review.feedback %}
+                                            <div class="stars stars{{feedback.score}}"></div>
+                                            <p class="card-text">{{feedback.date}}</p>
+                                            <p class="card-text">{{feedback.feedback}}</p>
+                                        {% endfor %}
+                                        {% assign mentorFound = true %}
+                                    {% endif %}
+                            {% endfor %}
+                            {% if mentorFound == false %}
+                                <p>This mentor hasn't received any reviews yet</p>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
