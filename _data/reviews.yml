@@ -32,29 +32,34 @@
       date: 20230621
       date-f: 21 June 2023
       type: Ad-hoc Session
+      name: Karina
       feedback: It was great talking to an experienced data scientist, committed to monitoring. Thank you so much for giving me this opportunity to talk with her.
     - score: 5
       date: 20231001
       date-f: 1 October 2023
       type: Ad-hoc Session
+      name: Hai
       feedback: The mentor was excellent and knowledgeable.
     - score: 5
       date: 20231024
       type: Ad-hoc Session
       date-f: 24 October 2023
+      name: Karina
       feedback: Aisha listened to me, gave me practical suggestions to help me and motivated me a lot. Thank you so much to Aisha and the program!
     - score: 5
       date: 20231025
       type: Ad-hoc Session
       date-f: 25 October 2023
+      name: Katja
       feedback: I found Aisha very friendly and easy to talk to. She gave me some great insights on what I need to get clear on to make my job search more targeted, and also suggested alternatives to looking externally. She brought my focus back to the question "what makes me happy". Super valuable session!
 
 - index: 10
   feedback:
     - score: 5
-      type: Ad-hoc Session
+      type: Long Term Mentorship
       date: 20230724
       date-f: 24 July 2023
+      name: Anonymous
       feedback: I'm grateful for her time and patience and I really like the resources she has shared with me so far
 
 - index: 11
@@ -78,6 +83,7 @@
       date: 20230622
       date-f: 22 June 2023
       type: Ad-hoc Session
+      name: Karina
       feedback: I made punctual que questions and concerns. Shelly was assertive in make me some questions to understand my points and support me pointing out skills I should improve and proving references where I could learn them. She gave me the direction I needed, now it's up to me to practice. I appreciate that.
 
 - index: 17
@@ -125,6 +131,12 @@
       name: Gayle
       type: Long Term Mentorship
       feedback: My mentee journey with Tara has been amazing. Tara is very patient and very passionate about her job, about engineering and about mentoring. Since I became her mentee, Tara has helped me with code blockers, emotional and general study issues. Her patience and complete dedication to the mentoring sessions is just fantastic and has helped me to grow and become more confident in my new career path as a career switcher into tech. She communicates very effectively with me whenever she needs to, and I in turn have learned how to communicate better too. Tara's advice and insights are always very practical and straight to the point. To help me learn and become better, she also assumes the role of a student and pushes me to figure things out in ways I would not think of. I am really very grateful to her mentoring and could not have asked for a better mentor. Thank you WWC-London
+    - score: 3
+      date: 20230801
+      date-f: 01 August 2023
+      name: Anonymous
+      type: Ad-hoc Session
+      feedback: Due to limited of time. Not much time for me as a mentee to learn more about the mentor.
 
 - index: 25
   feedback:
