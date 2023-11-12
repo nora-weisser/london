@@ -31,23 +31,28 @@
     - score: 5
       date: 20230621
       date-f: 21 June 2023
+      type: Ad-hoc Session
       feedback: It was great talking to an experienced data scientist, committed to monitoring. Thank you so much for giving me this opportunity to talk with her.
     - score: 5
       date: 20231001
       date-f: 1 October 2023
+      type: Ad-hoc Session
       feedback: The mentor was excellent and knowledgeable.
     - score: 5
       date: 20231024
+      type: Ad-hoc Session
       date-f: 24 October 2023
       feedback: Aisha listened to me, gave me practical suggestions to help me and motivated me a lot. Thank you so much to Aisha and the program!
     - score: 5
       date: 20231025
+      type: Ad-hoc Session
       date-f: 25 October 2023
       feedback: I found Aisha very friendly and easy to talk to. She gave me some great insights on what I need to get clear on to make my job search more targeted, and also suggested alternatives to looking externally. She brought my focus back to the question "what makes me happy". Super valuable session!
 
 - index: 10
   feedback:
     - score: 5
+      type: Ad-hoc Session
       date: 20230724
       date-f: 24 July 2023
       feedback: I'm grateful for her time and patience and I really like the resources she has shared with me so far
@@ -63,6 +68,7 @@
     - score: 4
       date: 20231106
       date-f: 6 November 2023
+      type: Long Term Mentorship
       feedback: It was a weird time because I applied for the mentorship when I was looking for a job and then I found a job just before it started so that limited the amount of help that Nassim could give just because of my situation, I still greatly enjoyed it and found it very helpful
       name: Ana
 
@@ -71,12 +77,14 @@
     - score: 5
       date: 20230622
       date-f: 22 June 2023
+      type: Ad-hoc Session
       feedback: I made punctual que questions and concerns. Shelly was assertive in make me some questions to understand my points and support me pointing out skills I should improve and proving references where I could learn them. She gave me the direction I needed, now it's up to me to practice. I appreciate that.
 
 - index: 17
   feedback:
     - score: 5
       date: 20230802
+      type: Ad-hoc Session
       date-f: 02 August 2023
       feedback: Thanks for this great opportunity; we have additional meetings with mentees, which also greatly helps. I achieved one of my goals (we set at the beginning of this program), and I am working on the rest.
 
@@ -130,6 +138,7 @@
 - index: 29
   feedback:
     - score: 5
+      type: Ad-hoc Session
       date: 20230803
       date-f: 3 August 2023
       feedback: Having a mentor is a great and motivating experience and I am grateful for being accepted into the program. It means a lot.
@@ -139,6 +148,7 @@
     - score: 5
       date: 20230722
       date-f: 22 July 2023
+      type: Ad-hoc Session
       feedback: I learned a new language
 
 - index: 32
@@ -181,10 +191,12 @@
   feedback:
     - score: 5
       date: 20230725
+      type: Ad-hoc Session
       date-f: 25 July 2023
       feedback: I am delighted to have Jenny as my mentor. The level of support, assistance, and care she provides is truly remarkable. Our conversations are incredibly comfortable, and I eagerly anticipate each new session.
     - score: 5
       date: 20230801
+      type: Ad-hoc Session
       date-f: 1 August 2023
       feedback: Yes, to be honest it was very insightful and interesting session. We discussed the topics that I need to work upon. She was constantly resolving all my doubts. We had set the goals to achieve my target and overall it was wonderful session I must say.
 
@@ -193,6 +205,7 @@
     - score: 5
       date: 20230721
       date-f: 21 July 2023
+      type: Ad-hoc Session
       feedback: Elena listened to all my problems and queries and provided solutions to them. It was a really insightful conversation with her. Her way of approaching to solutions of my different problems was very detailed. Her guidance is goal oriented that I must say. I couldn't have asked for a better mentor.
 
 - index: 46
@@ -200,4 +213,5 @@
     - score: 5
       date: 20230714
       date-f: 14 July 2023
+      type: Ad-hoc Session
       feedback: I really loved talking to Anastasia, I've got ton of ideas and insights! We developed the whole plan on how I can improve my career path!
