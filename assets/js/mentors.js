@@ -2,7 +2,7 @@ var controllerMentors = (function(jQuery) {
     var skillsButton = jQuery('.skills');
     var presentationButton = jQuery('.presentation');
     var menteesButton = jQuery('.mentees');
-    var reviewsButton = jQuery('.reviews');
+    let reviewsButton = jQuery('.reviews');
     var tooltip = jQuery('[data-toggle="tooltip"]');
     var toggleContent = jQuery('.toggle-content');
 
