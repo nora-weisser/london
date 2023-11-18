@@ -4,6 +4,7 @@
       date: 20230724
       date-f: 24 July 2023
       feedback: Fantastic. We really clicked. I am honoured that such an accomplished professional is gifting me her time and attention, and I try to make the most of it.
+      name: Zsuzsanna
 
 - index: 4
   feedback:
@@ -93,6 +94,7 @@
       type: Ad-hoc Session
       date-f: 02 August 2023
       feedback: Thanks for this great opportunity; we have additional meetings with mentees, which also greatly helps. I achieved one of my goals (we set at the beginning of this program), and I am working on the rest.
+      name: Anonymous
 
 - index: 19
   feedback:
@@ -110,6 +112,7 @@
       date-f: 20 July 2023
       type: Long Term Mentorship
       feedback: She is very good and organized, she always comes with new ideas and support
+      name: Anonymous
     - score: 5
       date: 20230726
       date-f: 26 July 2023
@@ -154,6 +157,7 @@
       date: 20230803
       date-f: 3 August 2023
       feedback: Having a mentor is a great and motivating experience and I am grateful for being accepted into the program. It means a lot.
+      name: Anonymous
 
 - index: 30
   feedback:
@@ -162,6 +166,7 @@
       date-f: 22 July 2023
       type: Ad-hoc Session
       feedback: I learned a new language
+      name: Anonymous
 
 - index: 32
   feedback:
@@ -171,6 +176,7 @@
       date: 20230720
       date-f: 20 July 2023
       feedback: I value how Madhura is supporting me. Thanks to her, I am increasing my self-confidence. Also, I can ask her any doubt and she kindly provides feedback. I am very happy. I also appreciate that the mentorship is open to people not based in London.
+      name: Maribel
     - score: 5
       date: 20230720
       date-f: 20 July 2023
@@ -206,11 +212,13 @@
       type: Ad-hoc Session
       date-f: 25 July 2023
       feedback: I am delighted to have Jenny as my mentor. The level of support, assistance, and care she provides is truly remarkable. Our conversations are incredibly comfortable, and I eagerly anticipate each new session.
+      name: Anonymous
     - score: 5
       date: 20230801
       type: Ad-hoc Session
       date-f: 1 August 2023
       feedback: Yes, to be honest it was very insightful and interesting session. We discussed the topics that I need to work upon. She was constantly resolving all my doubts. We had set the goals to achieve my target and overall it was wonderful session I must say.
+      name: Anonymous
 
 - index: 44
   feedback:
@@ -219,6 +227,7 @@
       date-f: 21 July 2023
       type: Ad-hoc Session
       feedback: Elena listened to all my problems and queries and provided solutions to them. It was a really insightful conversation with her. Her way of approaching to solutions of my different problems was very detailed. Her guidance is goal oriented that I must say. I couldn't have asked for a better mentor.
+      name: Anonymous
 
 - index: 46
   feedback:
@@ -227,3 +236,5 @@
       date-f: 14 July 2023
       type: Ad-hoc Session
       feedback: I really loved talking to Anastasia, I've got ton of ideas and insights! We developed the whole plan on how I can improve my career path!
+      name: Eleonora
+      type: Ad-hoc Session
