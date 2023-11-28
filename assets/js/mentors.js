@@ -116,3 +116,5 @@ var controllerMentors = (function(jQuery) {
 }(jQuery));
 
 controllerMentors.init();
+
+module.exports = { showPresentation, showSkills, showMenteesData, showReviewsData, CLASS_ACTIVE, CLASS_HIDDEN };
