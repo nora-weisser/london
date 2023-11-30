@@ -62,3 +62,5 @@ var controllerCodeOfConduct = (function(jQuery) {
 }(jQuery));
 
 controllerCodeOfConduct.init();
+
+module.exports = {controllerCodeOfConduct};
