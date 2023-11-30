@@ -35,6 +35,7 @@ describe('Show/Hide Button Functionality', () => {
     // Load jQuery globally
     global.jQuery = require('jquery');
     global.$ = global.jQuery;
+
   });
   
   afterEach(() => {
@@ -44,28 +45,56 @@ describe('Show/Hide Button Functionality', () => {
       delete global.$;
   });
 
-  test('test functionality Show more / Show less', () => {
+  test('Given Mentor Code Of Conduct When intitial state Then Show more is visible', () => {
 
-      require('../../assets/js/code_of_conduct');
-
+      const HIDDEN_CLASS = 'd-none';
       const learnMoreButton = document.getElementById('btn-mentee-learn-more');
       const showLessButton = document.getElementById('btn-mentee-show-less');
       const menteesConduct = document.getElementById('mentee-conduct');
-
-      console.log(learnMoreButton);
+  
+      require('../../assets/js/code_of_conduct');
     
       // Initial state assertions
       expect(learnMoreButton.innerHTML).toBe('Learn More');
-      expect(learnMoreButton.classList.contains('d-none')).toBe(false);
-      expect(showLessButton.classList.contains('d-none')).toBe(true);
-      expect(menteesConduct.classList.contains('d-none')).toBe(true);
-    
+      expect(learnMoreButton.classList.contains(HIDDEN_CLASS)).toBe(false);
+      expect(showLessButton.classList.contains(HIDDEN_CLASS)).toBe(true);
+      expect(menteesConduct.classList.contains(HIDDEN_CLASS)).toBe(true);
+
+  });
+
+  test('Given Mentor Code Of Conduct When Click Learn more Then all details are shown', () =>  {
+
+      const HIDDEN_CLASS = 'd-none';
+      const learnMoreButton = document.getElementById('btn-mentee-learn-more');
+      const showLessButton = document.getElementById('btn-mentee-show-less');
+      const menteesConduct = document.getElementById('mentee-conduct');
+      require('../../assets/js/code_of_conduct');
+
       learnMoreButton.click();
     
       // Assertions after clicking
-      expect(learnMoreButton.classList.contains('d-none')).toBe(true);
+      expect(learnMoreButton.classList.contains(HIDDEN_CLASS)).toBe(true);
       expect(showLessButton.innerHTML).toBe('Show Less');
-      expect(showLessButton.classList.contains('d-none')).toBe(false);
-      expect(menteesConduct.classList.contains('d-none')).toBe(false);
+      expect(showLessButton.classList.contains(HIDDEN_CLASS)).toBe(false);
+      expect(menteesConduct.classList.contains(HIDDEN_CLASS)).toBe(false);
   });
+
+  test('Given Mentor Code Of Conduct Opened When Click Show Less Then all details are hidden', () =>  {
+
+    const HIDDEN_CLASS = 'd-none';
+    const learnMoreButton = document.getElementById('btn-mentee-learn-more');
+    const showLessButton = document.getElementById('btn-mentee-show-less');
+    const menteesConduct = document.getElementById('mentee-conduct');
+    require('../../assets/js/code_of_conduct');
+
+    showLessButton.click();
+  
+    // Assertions after clicking
+    expect(learnMoreButton.classList.contains(HIDDEN_CLASS)).toBe(false);
+    expect(showLessButton.innerHTML).toBe('Show Less');
+    expect(showLessButton.classList.contains(HIDDEN_CLASS)).toBe(true);
+    expect(menteesConduct.classList.contains(HIDDEN_CLASS)).toBe(true);
+
+  });
+
 });
