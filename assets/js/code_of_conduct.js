@@ -1,56 +1,56 @@
-var controllerCodeOfConduct = (function(jQuery) {
-    var menteeConduct = jQuery("#mentee-conduct");
-    var mentorConduct = jQuery("#mentor-conduct");
+let controllerCodeOfConduct = (function(jQuery) {
+    let menteeConduct = jQuery("#mentee-conduct");
+    let mentorConduct = jQuery("#mentor-conduct");
     
-    var btnMenteeConduct = jQuery("#btn-mentee");
-    var btnMentorConduct = jQuery("#btn-mentor");
-    var btnHideMenteesConduct = jQuery("#btn-mentee-hide");
-    var btnHideMentorConduct = jQuery("#btn-mentor-hide");
+    let btnMenteeLearnMore = jQuery("#btn-mentee-learn-more");
+    let btnMentorLearnMore = jQuery("#btn-mentor-learn-more");
+    let btnHideMenteesShowLess = jQuery("#btn-mentee-show-less");
+    let btnHideMentorShowLess = jQuery("#btn-mentor-show-less");
     
 
-    var classHide = "d-none";
+    let classHide = "d-none";
 
-    var menteeCodeConduct = function() {
+    let menteeCodeConduct = function() {
         menteeConduct.removeClass(classHide);
-        btnHideMenteesConduct.removeClass(classHide);
-        btnMenteeConduct.addClass(classHide);
+        btnHideMenteesShowLess.removeClass(classHide);
+        btnMenteeLearnMore.addClass(classHide);
     }
 
-    var mentorCodeConduct = function() {
+    let mentorCodeConduct = function() {
         mentorConduct.removeClass(classHide);
-        btnHideMentorConduct.removeClass(classHide);
-        btnMentorConduct.addClass(classHide);
+        btnHideMentorShowLess.removeClass(classHide);
+        btnMentorLearnMore.addClass(classHide);
     }
 
-    var initPage = function() {
-        btnHideMenteesConduct.addClass(classHide);
-        btnHideMentorConduct.addClass(classHide);
-        btnMenteeConduct.removeClass(classHide);
-        btnMentorConduct.removeClass(classHide);
+    let initPage = function() {
+        btnHideMenteesShowLess.addClass(classHide);
+        btnHideMentorShowLess.addClass(classHide);
+        btnMenteeLearnMore.removeClass(classHide);
+        btnMentorLearnMore.removeClass(classHide);
 
         mentorConduct.addClass(classHide);
         menteeConduct.addClass(classHide);
     };
 
-    var init = function() {
+    let init = function() {
         initEvents();
         initPage();
     };
 
-    var initEvents = function() {
-        btnMenteeConduct.click(function() {
+    let initEvents = function() {
+        btnMenteeLearnMore.click(function() {
             menteeCodeConduct();
         });
 
-        btnMentorConduct.click(function() {
+        btnMentorLearnMore.click(function() {
             mentorCodeConduct();
         });
 
-        btnHideMenteesConduct.click(function() {
+        btnHideMenteesShowLess.click(function() {
             initPage();
         });
 
-        btnHideMentorConduct.click(function() {
+        btnHideMentorShowLess.click(function() {
             initPage();
         });
     };
@@ -58,7 +58,6 @@ var controllerCodeOfConduct = (function(jQuery) {
     return {
         init: init
     };
-
 }(jQuery));
 
 controllerCodeOfConduct.init();

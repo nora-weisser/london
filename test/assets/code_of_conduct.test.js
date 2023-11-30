@@ -23,8 +23,8 @@ describe('Show/Hide Button Functionality', () => {
         <li>Discussions between you and your mentor are considered to be confidential. Be careful about sensitive personal issues. Do not share any specific content of the sessions or personal data without the permission of your mentor.</li>
       </span>
       <div class="text-center">
-        <a class="btn btn-primary" id="btn-mentee" href="#">Learn More</a>
-        <a class="btn btn-primary d-none" id="btn-mentee-hide" href="#">Show Less</a>
+        <a class="btn btn-primary" id="btn-mentee-learn-more" href="#">Learn More</a>
+        <a class="btn btn-primary d-none" id="btn-mentee-show-less" href="#">Show Less</a>
       </div>
     `);
   
@@ -38,24 +38,21 @@ describe('Show/Hide Button Functionality', () => {
   });
   
   afterEach(() => {
-      // Clean up global variables after each test
       delete global.document;
       delete global.window;
-      // Remove global jQuery and $ after the script has run
       delete global.jQuery;
       delete global.$;
   });
 
   test('test functionality Show more / Show less', () => {
 
-      // Load script 
-      const { controllerCodeOfConduct } = require('../../assets/js/code_of_conduct');
+      require('../../assets/js/code_of_conduct');
 
-      // I would suggest to rename class as 'btn-mntee-learn-more''
-      const learnMoreButton = document.getElementById('btn-mentee');
-      // I would suggest to rename class as 'btn-mntee-show-less'
-      const showLessButton = document.getElementById('btn-mentee-hide');
+      const learnMoreButton = document.getElementById('btn-mentee-learn-more');
+      const showLessButton = document.getElementById('btn-mentee-show-less');
       const menteesConduct = document.getElementById('mentee-conduct');
+
+      console.log(learnMoreButton);
     
       // Initial state assertions
       expect(learnMoreButton.innerHTML).toBe('Learn More');
