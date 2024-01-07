@@ -1,14 +1,14 @@
 let controllerCodeOfConduct = (function(jQuery) {
-    let menteeConduct = jQuery("#mentee-conduct");
-    let mentorConduct = jQuery("#mentor-conduct");
+    const menteeConduct = jQuery("#mentee-conduct");
+    const mentorConduct = jQuery("#mentor-conduct");
     
-    let btnMenteeLearnMore = jQuery("#btn-mentee-learn-more");
-    let btnMentorLearnMore = jQuery("#btn-mentor-learn-more");
-    let btnHideMenteesShowLess = jQuery("#btn-mentee-show-less");
-    let btnHideMentorShowLess = jQuery("#btn-mentor-show-less");
+    const btnMenteeLearnMore = jQuery("#btn-mentee-learn-more");
+    const btnMentorLearnMore = jQuery("#btn-mentor-learn-more");
+    const btnHideMenteesShowLess = jQuery("#btn-mentee-show-less");
+    const btnHideMentorShowLess = jQuery("#btn-mentor-show-less");
     
 
-    let classHide = "d-none";
+    const classHide = "d-none";
 
     let menteeCodeConduct = function() {
         menteeConduct.removeClass(classHide);
@@ -61,5 +61,3 @@ let controllerCodeOfConduct = (function(jQuery) {
 }(jQuery));
 
 controllerCodeOfConduct.init();
-
-module.exports = {controllerCodeOfConduct};
