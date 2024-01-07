@@ -2,7 +2,7 @@ const { JSDOM } = require('jsdom');
 
 describe('Show/Hide Button on Mentees Code of Conduct when Clicking on Learn More Button', () => {
 
-  const classHide = "d-none";
+  const classHide = 'd-none';
 
   beforeEach(() => {
 
