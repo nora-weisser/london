@@ -2,6 +2,8 @@ const { JSDOM } = require('jsdom');
 
 describe('Show/Hide Button on Mentees Code of Conduct when Clicking on Learn More Button', () => {
 
+  const classHide = "d-none";
+
   beforeEach(() => {
 
     // Create a new JSDOM environment
@@ -59,9 +61,9 @@ describe('Show/Hide Button on Mentees Code of Conduct when Clicking on Learn Mor
     
       // Initial state assertions
       expect(learnMoreButton.innerHTML).toBe('Learn More');
-      expect(learnMoreButton.classList.contains('d-none')).toBe(false);
-      expect(showLessButton.classList.contains('d-none')).toBe(true);
-      expect(menteesConduct.classList.contains('d-none')).toBe(true);
+      expect(learnMoreButton.classList.contains(classHide)).toBe(false);
+      expect(showLessButton.classList.contains(classHide)).toBe(true);
+      expect(menteesConduct.classList.contains(classHide)).toBe(true);
   });
 
   // skip this test case, since it fails and needs review
@@ -72,10 +74,10 @@ describe('Show/Hide Button on Mentees Code of Conduct when Clicking on Learn Mor
   
     learnMoreButton.click();
   
-    expect(learnMoreButton.classList.contains('d-none')).toBe(true);
+    expect(learnMoreButton.classList.contains(classHide)).toBe(true);
     expect(showLessButton.innerHTML).toBe('Show Less');
-    expect(showLessButton.classList.contains('d-none')).toBe(false);
-    expect(menteesConduct.classList.contains('d-none')).toBe(false);
+    expect(showLessButton.classList.contains(classHide)).toBe(false);
+    expect(menteesConduct.classList.contains(classHide)).toBe(false);
   });
   
 });
