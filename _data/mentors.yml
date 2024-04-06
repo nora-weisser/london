@@ -2871,7 +2871,8 @@
     experience: 5-7 Years
     years: 7
     mentee: I can help with all soft-skills related coaching
-    languages: Python
+    areas:
+      -
     focus:
       - Switch from IC to management position
     extra: Resume review, emotional intelligence, communication, interviewing
